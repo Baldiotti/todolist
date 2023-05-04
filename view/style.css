@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+    --cor-primaria: #F7F7F7;
+    --cor-secundaria: #DBDBDB;
+    --cor-terciaria: #878787;
+    --cor--texto: rgb(51 180 196);
+    --shadow: black;
+}
+
+hr {
+    height: 2px;
+    background-color: var(--cor-secundaria);
+    border: none;
+    border-radius: 10px;
+}
+
+.corpo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 300px;
+    padding: 20px 25px;
+    justify-content: space-around;
+    background-color: var(--cor-primaria);
+    border-radius: 15px;
+    box-shadow: var(--shadow) 1px 1px 14px -5px;
+}
+
+
+
+/* ------- tlMenu ------- */
+
+.tlMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--cor--texto);
+}
+
+
+.tlMn_Btn {
+    background-color: transparent;
+    border: none;
+    transition: all 0.3s linear;
+    border-radius: 10px;
+}
+.tlMn_Btn:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
+.menosHori, .menosVert {
+    position: relative;
+    z-index: 1;
+    height: 25px; 
+    transition: all .5s ease-in-out;
+}
+.menosHori {
+    transform: translate(60%, 10%);
+}
+.menosVert {
+    transform: translate(-55%, 10%);
+}
+
+.menosHori1 {
+    transform: rotate(180deg) translate(-55%, -5%);
+}
+.menosVert1 {
+    transform: rotate(180deg) translate(60%, 10%);
+    opacity: 0;
+}
+
+
+
+/* ------- tlNewTask ------- */
+
+.tlNewTask {
+    height: 0px;
+    overflow-y: hidden;
+    transition: height 0.5s linear;
+}
+.tlNewTaskH {
+    height: 95px
+}
+
+.tlNT_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.tlNT_form > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#tlNT_Data, #tlNT_Nome, #tlNT_Desc {
+    width: 160px;
+}
+
+
+/* ------- tlTasks ------- */
+
+.tlTasks {
+    display: flex;
+    flex-direction: column;
+    height: 270px;
+    gap: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+
+.tlT_ul {
+    margin-left: 15px;
+}
+
+
+.tlT_Task {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7px;
+    background-color: var(--cor-secundaria);
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.tlT_TaskTitle {
+    font-size: 12px;
+}
+
+.tlT_Delete {
+    background-color: transparent;
+    border: none;
+    padding-top: 3px;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+.tlT_Delete > img {
+    height: 23px;
+}
+
+.tlT_Delete:hover {
+    background-color: var(--cor-terciaria);;
+}

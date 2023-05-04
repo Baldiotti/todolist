@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="corpo">
+        <div class="todoList">
+            <div class="tlMenu">
+                <h3 class="tlMn_Titulo">ToDo DTI</h3>
+                <button class="tlMn_Btn">
+                    <img src="imagens/menosHori.png" alt="menos" class="menosHori" id="menosHorimF">
+                    <img src="imagens/menosVert.png" alt="menos" class="menosVert" id="menosVertmF">
+                </button>
+            </div>
+            <hr>
+            <div class="tlNewTask">
+                <form method="post" class="tlNT_form">
+                <div>
+                    <label for="titulo">Titulo:</label>
+                    <input type="text" name="titulo" id="tlNT_Nome" placeholder="Nome da Tarefa...">
+                </div>
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" name="data" id="tlNT_Data">
+                </div>
+                <input type="submit" value="Adicionar" class="tlNT_Btn">    
+            </form>
+            </div>
+            <hr>
+            <div class="tlTasks">
+                <div><p>Lista de Tarefas</p></div>
+                <ul class="tlT_ul" id="tlT_ul">
+                    <p class="tlT_DataTask">03/05/2023</p>
+                    <ul class="tlT_Lista">
+                        <li class="tlT_Task">
+                            <p class="tlT_TaskTitle">Task Title</p>
+                            <button class="tlT_Delete" id="1" onclick="deleta(id)"><img src="imagens/trashcan.png" alt="lixeira"></button>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
